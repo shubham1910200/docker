@@ -44,6 +44,8 @@ services:
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DATABASE_HOST}/${POSTGRES_DB}
       - DATABASE_DIRECT_URL=${DATABASE_URL}
+      - TERMS_OF_SERVICE_URL=${TERMS_OF_SERVICE_URL}
+      - PRIVACY_POLICY_URL=${PRIVACY_POLICY_URL}
     depends_on:
       - database
 
